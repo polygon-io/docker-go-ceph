@@ -1,4 +1,4 @@
-FROM ceph/daemon-base:latest-mimic-devel
+FROM ceph/daemon-base:latest-nautilus-devel
 
 RUN yum install wget git gcc -y && yum clean all
 
