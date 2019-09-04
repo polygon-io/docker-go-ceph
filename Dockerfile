@@ -1,4 +1,4 @@
-FROM ceph/daemon-base:master-532cef1-luminous-centos-7
+FROM ceph/daemon-base:latest-mimic-devel
 
 RUN yum install wget git gcc -y && yum clean all
 
