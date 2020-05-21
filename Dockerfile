@@ -5,8 +5,10 @@ RUN yum install wget git gcc -y && yum clean all
 # For some reason, this needs to be seperate yum installs... idk
 RUN yum install libcephfs-devel librbd-devel librados-devel -y && yum clean all
 
-RUN wget https://dl.google.com/go/go1.12.7.linux-amd64.tar.gz && \
-	tar -xvf go1.12.7.linux-amd64.tar.gz && \
+ARG GOVERSION=1.14.3
+
+RUN wget https://dl.google.com/go/go$GOVERSION.linux-amd64.tar.gz && \
+	tar -xvf go$GOVERSION.linux-amd64.tar.gz && \
 	mv go /usr/local
 
 ENV GOROOT=/usr/local/go
