@@ -1,5 +1,6 @@
 ---
 kind: pipeline
+type: docker
 name: build dry run
 
 platform:
@@ -24,6 +25,7 @@ trigger:
 
 ---
 kind: pipeline
+type: docker
 name: build and push
 
 platform:
